@@ -41,7 +41,6 @@ const config = {
   plugins: [
     peerDepsExternal(),
     postcss({
-      modules: true,
       minimize: true,
       plugins: [autoprefixer({ browsers: ["last 2 versions"] })]
     }),
