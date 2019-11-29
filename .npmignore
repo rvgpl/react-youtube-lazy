@@ -1,0 +1,14 @@
+.DS_Store
+.eslintcache
+node_modules
+npm-debug.log
+src/
+test/
+*.test.js
+coverage/
+rollup.config.js
+.babelrc
+.eslintignore
+.eslintric
+.gitignore
+styleguide/

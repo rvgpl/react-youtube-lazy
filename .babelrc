@@ -1,0 +1,20 @@
+// prettier-ignore
+{
+  "env": {
+    "test": {
+      "presets": ["env", "react"],
+      "plugins": ["transform-class-properties","transform-object-rest-spread"],
+      "ignore": ["node_modules/**"]
+    },
+    "development": {
+      "presets": [["env", { "modules": false }], "react"],
+      "plugins": ["transform-class-properties","transform-object-rest-spread"],
+      "ignore": ["node_modules/**"]
+    },
+    "production": {
+      "presets": [["env", { "modules": false }], "react"],
+      "plugins": ["transform-class-properties","transform-object-rest-spread"],
+      "ignore": ["node_modules/**"]
+    }
+  }
+}
