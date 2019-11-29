@@ -18,7 +18,8 @@
     "test:cover": "export NODE_ENV=test && jest --env=jsdom --coverage; open coverage/index.html",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "dist": "npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,9 @@
   },
   "keywords": [
     "react",
-    "component"
+    "component",
+    "youtube",
+    "lazy"
   ],
   "author": "Ravigopal Kesari",
   "license": "MIT",
