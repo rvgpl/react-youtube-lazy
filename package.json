@@ -1,0 +1,113 @@
+{
+  "name": "@rvgpl/react-youtube-lazy",
+  "version": "0.1.0",
+  "description": "A React component for Youtube embed which load image first and on interaction loads the iframe.",
+  "main": "build/index.cjs.js",
+  "module": "build/index.esm.js",
+  "browser": "build/index.js",
+  "style": "build/index.css",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint --ext .js ./src",
+    "start": "rollup -c -w",
+    "test": "NODE_ENV=test && jest --env=jsdom --watchAll",
+    "format": "prettier '**/*.{js,jsx,css,scss}' --write",
+    "test:cover": "export NODE_ENV=test && jest --env=jsdom --coverage; open coverage/index.html",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvgpl/react-youtube-lazy.git"
+  },
+  "keywords": [
+    "react",
+    "component"
+  ],
+  "author": "Ravigopal Kesari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rvgpl/react-youtube-lazy.git/issues"
+  },
+  "homepage": "https://github.com/rvgpl/react-youtube-lazy.git#readme",
+  "peerDependencies": {
+    "prop-types": "^15.x.x",
+    "react": ">=15.x.x || ^16.x.x",
+    "react-dom": ">=15.0.0 || ^16.x.x",
+    "react-youtube": "^7.9.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^23.0.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "eslint": "^5.0.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.9.1",
+    "husky": "^0.14.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.4.3",
+    "lint-staged": "^6.0.0",
+    "node-sass": "^4.8.3",
+    "postcss": "^6.0.21",
+    "postcss-loader": "^2.1.5",
+    "precss": "^3.1.2",
+    "prettier": "^1.13.7",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-styleguidist": "^7.0.20",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-filesize": "^2.0.0",
+    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.1.0",
+    "rollup-plugin-postcss": "^1.5.1",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.15.1",
+    "webpack-blocks": "^1.0.0",
+    "react-youtube": "^7.9.0"
+  },
+  "lint-staged": {
+    "*.{js,scss,css}": [
+      "npm run format && npm run lint",
+      "git add"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|sass|scss|postcss)$": "identity-obj-proxy"
+    },
+    "setupTestFrameworkScriptFile": "./src/setupTests.js",
+    "coverageReporters": [
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}
